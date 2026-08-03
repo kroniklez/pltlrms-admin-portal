@@ -272,7 +272,7 @@ class LoadsheetDetailCard extends StatelessWidget {
                       Padding(
                         padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 10),
                         child: Container(
-                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 2),
                           decoration: BoxDecoration(
                             color: (s['mode'] == 'online' ? AppColors.primary : AppColors.secondary).withOpacity(0.1),
                             borderRadius: BorderRadius.circular(4),
@@ -284,10 +284,12 @@ class LoadsheetDetailCard extends StatelessWidget {
                           child: Text(
                             s['mode']?.toString().toUpperCase() ?? 'PHYSICAL',
                             style: TextStyle(
-                              fontSize: 10,
+                              fontSize: 9,
                               fontWeight: FontWeight.bold,
                               color: s['mode'] == 'online' ? AppColors.primary : AppColors.secondary,
                             ),
+                            overflow: TextOverflow.ellipsis,
+                            maxLines: 1,
                           ),
                         ),
                       ),
